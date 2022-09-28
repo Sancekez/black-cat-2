@@ -1,0 +1,9 @@
+
+mixin commentBlock(data)
+	.comment-block&attributes(attributes) 
+		._img
+			+webp(data.img)
+		._name 
+			!= data.name
+		._text
+			!= data.text

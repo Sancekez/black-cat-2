@@ -1,0 +1,184 @@
+.main-section {
+	padding: 130px 0 70px;
+	position: relative;
+
+	&__title {
+		margin-bottom: 48px;
+		text-transform: uppercase;
+		color: $gray;
+		padding-bottom: 53px;
+		position: relative;
+
+		&::after {
+			content: "";
+			display: block;
+			height: 23px;
+			background: #f3ece1;
+			position: absolute;
+			bottom: 0;
+			left: -80px;
+			right: -80px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 35px;
+	}
+
+	@include media($lg) {
+		padding: 100px 0 70px;
+	}
+	@include media($md) {
+		padding: 70px 0 50px;
+
+		&__title {
+			margin-bottom: 38px;
+			padding-bottom: 23px;
+			position: relative;
+
+			&::after {
+				height: 12px;
+				left: -20px;
+				right: -20px;
+			}
+		}
+	}
+
+	@include media($sm) {
+		padding: 0px 0 50px;
+
+		&__title {
+			margin-bottom: 70px;
+			padding-bottom: 0;
+			text-align: center;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&__subtitle {
+			margin-bottom: 25px;
+			text-align: center;
+		}
+	}
+
+	@include media($xs) {
+		&__title {
+			margin-bottom: 50px;
+		}
+	}
+
+	&--portfolio & {
+		&__row {
+			gap: 10px 0;
+			margin: 0 -5px 80px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__col {
+			padding: 0 5px;
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		@include media($sm) {
+			&__row {
+				margin-bottom: 70px;
+			}
+		}
+		@include media($xs) {
+			&__row {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&--about-windows & {
+		&__list {
+		}
+		&__item {
+			margin-bottom: 80px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include media($md) {
+				margin-bottom: 70px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	&--about-windows-2 {
+		padding-bottom: 0;
+		overflow: hidden;
+	}
+	&--about-windows-2 & {
+		&__list {
+		}
+		&__item {
+			padding: 60px calc(50vw - 50%);
+			margin: 0 calc(-50vw + 50%);
+
+			&--bg {
+				background-color: #f3ece1;
+			}
+
+			@include media($sm) {
+				padding: 40px calc(50vw - 50%);
+			}
+		}
+	}
+
+	&--about-windows-3 {
+		padding-bottom: 120px;
+
+		@include media($sm) {
+			padding: 50px 0 50px;
+		}
+	}
+	&--about-windows-3 & {
+		&__reliability {
+			margin-bottom: 115px;
+
+			@include media($md) {
+				margin-bottom: 70px;
+			}
+			@include media($sm) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	&--decor {
+		padding: 48px 0 88px;
+		background-color: #f3ece1;
+	}
+	&--decor & {
+		&__title {
+			&::after {
+				background: $white;
+			}
+		}
+		&__item {
+			margin-bottom: 118px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@include media($md) {
+				margin-bottom: 70px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

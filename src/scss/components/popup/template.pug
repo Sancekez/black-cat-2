@@ -1,0 +1,62 @@
+include ../form-block/template
+
+mixin popup(data)
+	.popup&attributes(attributes)
+		._overflow.js-popup-hide
+		._wrapper
+			a._close.js-popup-hide
+				img(src="./images/close.png", alt="")
+			block
+
+mixin popupBooking(data)
+	+popup().popup--booking#popup-booking
+		._logo
+			+webp("images/logo.png")
+		._form
+			+formBlock()
+
+mixin popupBooking2(data)
+	+popup().popup--booking#popup-booking2
+		._logo
+			+webp("images/logo.png")
+		._form
+			+formBlock2()
+
+mixin popupMessage(data)
+	+popup().popup--message#popup-message
+		._body
+			._logo
+				+webp("images/logo.png")
+			._title ВАША ЗАЯВКА УСПЕШНО ОТПРАВЛЕНА!
+			._subtitle координатор свяжется с Вами в ближайшее время
+			._time
+				p часы работы: 9:00 - 18:00
+				p по Кемеровской области
+
+mixin popupTours(data)
+	+popup().popup--booking#popup-tour
+		._logo
+			+webp("images/logo.png")
+		._form
+			+formBlock3()
+
+mixin popupApparts(data)
+	+popup().popup--booking#popup-appart
+		._logo
+			+webp("images/logo.png")
+		._form
+			+formBlock4()
+
+mixin popupEquipment(data)
+	+popup().popup--booking#popup-equipment
+		._logo
+			+webp("images/logo.png")
+		._form
+			+formBlock5()
+
+mixin popupTransfer(data)
+	+popup().popup--booking#popup-transfer
+		._logo
+			+webp("images/logo.png")
+		._form
+			+formBlock6()

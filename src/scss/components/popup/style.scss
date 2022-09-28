@@ -1,0 +1,196 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: -10000px;
+	width: 100%;
+	z-index: 9999;
+	height: 100%;
+	display: block;
+	visibility: hidden;
+	pointer-events: none;
+	opacity: 0;
+	overflow-y: auto;
+	padding: 50px 30px;
+	//@include time(0.4s, opacity);
+	transition: left 0s ease 0.5s, opacity 0.1s ease;
+	@include media($sm) {
+		padding: 0;
+	}
+
+	&__overflow {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		display: block;
+		background: rgba($black, 0.68);
+	}
+
+	&__wrapper {
+		position: relative;
+		width: 100%;
+		padding: 160px 26px 40px;
+		max-width: 450px;
+		margin: auto;
+		z-index: 1;
+		background: $white;
+		transform: translateY(150px) rotateX(-85deg);
+		opacity: 0;
+		@include time(0.4s);
+		perspective: 1000px;
+		perspective-origin: 50% 50%;
+		@include media($lg) {
+			padding: 150px 26px 40px;
+		}
+
+		&::after {
+			position: absolute;
+			display: block;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 114px;
+			width: 100%;
+			background-image: url("../images/popup-bg.jpg");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: 100% 100%;
+			background-color: #5ba3aa;
+			z-index: -1;
+			@include media($lg) {
+				height: 100px;
+			}
+		}
+	}
+
+	&__close {
+		display: flex;
+		justify-content: flex-end;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		cursor: pointer;
+		img {
+			width: 30px;
+			height: 30px;
+			display: block;
+			@include media($sm) {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		&:hover {
+			background: $gray-bg;
+		}
+	}
+	&__logo {
+		position: absolute;
+		top: 45px;
+		left: calc(50% - 75px);
+		width: 150px;
+		// @include media($sm) {
+		// 	width: 150px;
+		// 	top: 90px;
+		// 	left: calc(50% - 75px);
+		// }
+	}
+
+	&__form {
+		max-width: 505px;
+		width: 100%;
+		@include media($sm) {
+			max-width: 100%;
+		}
+	}
+
+	&--message & {
+		&__logo {
+			position: relative;
+			top: 0;
+			max-width: 145px;
+			width: 100%;
+			right: 0;
+			left: 0;
+			margin: 0 auto 15px;
+			@include media($md) {
+				max-width: 120px;
+			}
+		}
+		&__title {
+			font: 700 23px/25px $baseFF;
+			margin-bottom: 10px;
+			text-align: center;
+			@include media($md) {
+				font: 700 18px/20px $baseFF;
+			}
+		}
+		&__subtitle {
+			font: 300 20px/22px $baseFF;
+			margin-bottom: 25px;
+			text-align: center;
+			@include media($md) {
+				font: 300 16px/20px $baseFF;
+				margin-bottom: 20px;
+			}
+		}
+		&__time {
+			font: 300 18px/20px $baseFF;
+			text-align: center;
+			@include media($md) {
+				font: 300 16px/20px $baseFF;
+			}
+			p {
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__close {
+			top: 40px;
+			right: 40px;
+		}
+		&__wrapper {
+			transform: translateY(50%) !important;
+			background-color: transparent;
+			max-width: 695px;
+			padding: 30px;
+			width: 100%;
+			&::after {
+				display: none;
+			}
+			@include media($lg) {
+				padding: 30px 10px;
+			}
+		}
+		&__body {
+			width: 100%;
+			background: $green-bg;
+			padding: 20px 75px;
+			color: $white;
+			@include media($md) {
+				padding: 20px 30px;
+			}
+			@include media($sm) {
+				padding: 15px 15px;
+			}
+		}
+	}
+
+	&.is-active {
+		opacity: 1;
+		visibility: visible;
+		left: 0;
+		pointer-events: auto;
+		transition: left 0s ease, opacity 0.1s ease;
+	}
+	&.is-active & {
+		&__wrapper {
+			transform: translateY(0) scale(1, 1) rotateX(0);
+			opacity: 1;
+		}
+	}
+}

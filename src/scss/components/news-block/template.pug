@@ -1,0 +1,72 @@
+
+mixin newsBlock(data)
+	.news-block&attributes(attributes)
+		._img
+			a(href="#")
+				if data.img
+					+webp(data.img)
+				else
+					img(src="images/no-img.svg" alt="") 
+		._wrap
+			._title
+				a(href="#")
+					!= data.title
+			if data.date
+				._date
+					!= data.date
+			if data.text
+				._text
+					!= data.text
+
+mixin newsBlockRow(data)
+	.news-block.-row&attributes(attributes)
+		._body.row
+			if data.img
+				._img.col-4.col-md-5.col-sm-12
+					a(href="#")
+						if data.img
+							+webp(data.img)
+						else
+							img(src="images/no-img.svg" alt="") 
+			._wrap.col-8.col-md-7.col-sm-12
+				._title
+					a(href="#")
+						!= data.title
+				if data.date
+					._date
+						!= data.date
+				if data.text
+					._text
+						!= data.text
+				._button
+					a.btn.-border(href="#") Читать полностью		
+
+mixin newsBlockNoImg(data)
+	.news-block.-no-img&attributes(attributes)
+		._wrap
+			if data.date
+				._date
+					!= data.date
+			._title
+				a(href="#")
+					!= data.title
+			
+			if data.text
+				._text
+					!= data.text 
+
+mixin newsBlockHorisontal(data)
+	.news-block.-horisontal&attributes(attributes)
+		._img
+			a(href="#")
+				if data.img
+					+webp(data.img)
+				else
+					img(src="images/no-img.svg" alt="")
+		._wrap
+			._title
+				a(href="#")
+					!= data.title
+			._text
+				!= data.text
+

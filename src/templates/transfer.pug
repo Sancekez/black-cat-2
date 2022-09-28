@@ -1,0 +1,22 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'transfer.html';
+	- var pageTitle = 'Трансфер';
+	- var classBody = 'transfer';
+block styles
+
+block content
+	include ../scss/components/header/template
+	+header6({
+		link_4: "is-active",
+	})
+
+	.transfer-page
+		include ../scss/components/transfer-section/template
+		+transferSection()._transfer
+		._img
+			+webp('images/transfer-img.jpg')
+
+	//- +gridLayout()
+
+block scripts 

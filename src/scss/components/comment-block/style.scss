@@ -1,0 +1,69 @@
+.comment-block {
+	position: relative;
+	z-index: 1;
+
+	border: 2px $brown solid;
+	padding: 33px 52px 68px;
+	border-radius: 50px;
+	color: $black;
+
+	&__img {
+		@include flex(center);
+		margin-bottom: 12px;
+
+		img {
+			display: block;
+			width: 197px;
+			height: 197px;
+			border: 5px $white solid;
+			border-radius: 50%;
+		}
+	}
+	&__name {
+		font: bold 22px $baseFF;
+		margin-bottom: 25px;
+		text-align: center;
+	}
+	&__text {
+		font: 22px $baseFF;
+		text-align: center;
+	}
+
+	@include media($md) {
+		padding: 24px 32px 48px;
+		border-radius: 40px;
+
+		&__img {
+			img {
+				width: 127px;
+				height: 127px;
+			}
+		}
+		&__name {
+			font: bold 20px $baseFF;
+			margin-bottom: 20px;
+		}
+		&__text {
+			font: 18px $baseFF;
+		}
+	}
+
+	@include media($xs) {
+		padding: 20px 16px 28px;
+		border-radius: 20px;
+
+		&__img {
+			img {
+				width: 107px;
+				height: 107px;
+			}
+		}
+		&__name {
+			font: bold 18px $baseFF;
+			margin-bottom: 20px;
+		}
+		&__text {
+			font: 16px $baseFF;
+		}
+	}
+}

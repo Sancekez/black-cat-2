@@ -1,0 +1,35 @@
+include ../news-block/template
+
+mixin newsSection(data)
+	.news-section&attributes(attributes)
+		._container.container
+			._title.title-h2 новости сайта
+			._row.row.row--stretch
+				._col.col-8.col-sm-12.col-xs-12
+					._row.row.row--stretch
+						._item.col-6.col-xs-12 
+							+newsBlockNoImg({
+								title: 'Картофель посевной!!! Новое поступление!',
+								date: '20.01.2021',
+								text: 'О существовании картофеля, лет двести назад, многие страны и не подозревали. А сегодня популярность «второго хлеба» на нашем столе непрерывно набирает обороты. Блюда из картофеля уместны как на празднике, так и в будни.'
+							})
+						._item.col-6.col-xs-12 
+							+newsBlockNoImg({
+								title: 'Чеснок яровой Флавор! Новые поступления в нашем интернет-магазине и садовых центрах!',
+								date: '20.01.2021',
+								text: 'Яровой чеснок сорта Флавор, выведенный опытными французскими селекционерами. Этот старый и проверенный чеснок характеризуется высокими показателями.'
+							}).news-block--blue
+						._item.col-12
+							+newsBlockHorisontal({
+								img: 'images/news-img-2.jpg',
+								title: 'Розы питомника Imperial Rose (Сербия)! Новое поступление!',
+								text: 'Imperial Rose – известный во всем мире питомник, производитель роз, популярный среди садоводов всего мира.'
+							})
+				._col.col-4.col-sm-12.col-xs-12.d-none_sm.d-block_xs
+					+newsBlock({
+						img: 'images/news-img-1.jpg',
+								title: 'Лилии и Лилии RoseLily! Новые поступления в нашем интернет-магазине и садовых центрах!',
+								date: '20.01.2021',
+								text: 'Лилии RoseLily – это линейка восточных махровых лилий, которые имеют ряд преимуществ... <a href="#" class="news-block__more">Подробнее</a>'
+					})
+				

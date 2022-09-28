@@ -1,0 +1,41 @@
+.review-block {
+	&__container {
+		max-width: 280px;
+		padding: 0;
+	}
+	&__img {
+		width: 80px;
+		height: 80px;
+		margin-bottom: 20px;
+		@include media($sm) {
+			margin: 0 auto;
+		}
+		@include media($xs) {
+			margin-bottom: 13px;
+			width: 40px;
+			height: 40px;
+		}
+	}
+	&__head {
+		@include flex(0,0,0,nowrap,column);
+		margin-bottom: 15px;
+	}
+	&__name {
+		font: 700 25px/30px $baseFF;
+		@include media($sm) {
+			text-align: center;
+		}
+		@include media($xs) {
+			font: 700 15px/15px $baseFF;
+		}
+	}
+	&__text {
+		font: 300 20px/1 $baseFF;
+		max-height: 220px;
+		// overflow-y: auto;
+		@include media($xs) {
+			text-align: center;
+			font: 300 14px/14px $baseFF;
+		}
+	}
+}

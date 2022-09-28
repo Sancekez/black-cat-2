@@ -1,0 +1,27 @@
+mixin scheduleSection(data) 
+	.schedule-section&attributes(attributes)
+		._container.container
+			._info
+				._left
+					._title.title-h2 ТАЙМИНГ ТУРА
+					._items
+						._item
+							._time 8:30
+							._text Сбор в кафе гостиницы AYS<br> (ул. Спортивная, д. 8).<br> Инструктаж
+						._item
+							._time 9:00
+							._text Посадка в ратрак и<br> первый подъем
+						._item
+							._time 9:40
+							._text Разминка и первый спуск
+						._item
+							._time 13:30
+							._text Обед<br> (включен в стоимость)
+						._item
+							._time 16:00
+							._text Заключительный спуск
+						._item
+							._time 17:00
+							._text Возвращение
+				._right
+					+webp('images/schedule.jpg')._img

@@ -1,0 +1,39 @@
+.apparts-section {
+	position: relative;
+	&__container {
+		max-width: 893px;
+	}
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 1920px;
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__item {
+		margin-bottom: 78px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include media($sm) {
+			margin-bottom: 60px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@include media($xs) {
+			margin-bottom: 39px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

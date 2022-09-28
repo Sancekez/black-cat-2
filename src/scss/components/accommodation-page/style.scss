@@ -1,0 +1,8 @@
+.accommodation-page {
+	&__item {
+		padding: 18px 0 85px;
+		@include media($xs) {
+			padding: 76px 0 45px;
+		}
+	}
+}

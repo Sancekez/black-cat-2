@@ -1,0 +1,175 @@
+.first-section {
+	position: relative;
+	z-index: 1;
+	padding: 70px 0;
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		object-fit: cover;
+		object-position: 50% 50%;
+	}
+
+	&__title {
+		font: bold 48px/58px $titleFF;
+		color: $gray;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+
+		span {
+			color: $red;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 40px;
+		color: $black;
+		text-transform: none;
+	}
+	&__input {
+		margin-bottom: 12px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__wrapper {
+		max-width: 774px;
+	}
+	&__form {
+		&-title {
+			font: bold 40px $baseFF;
+			margin-bottom: 32px;
+			color: $black;
+		}
+		&-row {
+			margin: 0 -11px;
+			align-items: flex-end;
+		}
+		&-col {
+			padding: 0 11px;
+		}
+	}
+	&__btn {
+		width: 100%;
+		margin-top: 8px;
+	}
+	&__police {
+		margin-top: 12px;
+	}
+
+	&__finish {
+		display: none;
+		margin-top: 40px;
+
+		&-title {
+			color: #434343;
+		}
+
+		&.is-active {
+			display: block;
+		}
+	}
+
+	@include media($md) {
+		&__bg {
+			object-position: 80% 50%;
+		}
+		&__form {
+			&-title {
+				font: bold 30px $baseFF;
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	@include media($sm) {
+		padding: 0;
+		&__title {
+			font: bold 30px/40px $titleFF;
+			height: 327px;
+			@include flex(center, 0, 0, nowrap, column);
+			margin-bottom: 30px;
+		}
+		&__subtitle {
+			padding-top: 50px;
+			margin-bottom: 30px;
+		}
+		&__bg {
+			height: 327px;
+		}
+
+		&__wrapper {
+			max-width: 462px;
+		}
+		&__form {
+			&-title {
+				font: bold 30px $baseFF;
+				margin-bottom: 40px;
+			}
+		}
+		&__btn {
+			width: 100%;
+			margin-top: 8px;
+		}
+		&__police {
+			margin-top: 12px;
+		}
+	}
+
+	@include media($xs) {
+		&__bg {
+			height: 170px;
+		}
+		&__subtitle {
+			//padding-top: 40px;
+			margin-bottom: 16px;
+			font-size: 16px;
+			max-width: 65%;
+
+			padding-top: 10px;
+		}
+		&__title {
+			font: bold 16px/21px $titleFF;
+			height: 170px;
+		}
+		&__form {
+			&-title {
+				font: bold 16px $baseFF;
+				margin-bottom: 60px;
+				max-width: 60%;
+			}
+		}
+	}
+
+	&--2 {
+		padding: 86px 0;
+
+		@include media($sm) {
+			padding: 0 0 85px;
+		}
+
+		@include media($xs) {
+			padding: 0 0 50px;
+		}
+	}
+
+	&--3 & {
+		&__bg {
+			object-position: 50% 50%;
+		}
+		&__form {
+			&-title {
+				max-width: 290px;
+			}
+		}
+
+		@include media($xs) {
+			&__bg {
+				object-position: 60% 50%;
+			}
+		}
+	}
+}

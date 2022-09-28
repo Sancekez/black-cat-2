@@ -1,0 +1,12 @@
+
+mixin teamBlock(data)
+	.team-block&attributes(attributes) 
+		._img
+			+webp(data.img)
+		._info
+			._name 
+				!= data.name
+			._subtitle
+				!= data.subtitle
+			._text
+				!= data.text

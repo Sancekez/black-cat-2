@@ -1,0 +1,26 @@
+include ../soc-list/template
+
+mixin footer(data)
+	footer.footer&attributes(attributes)
+		._bg
+			+webp("images/footer-bg.png")
+		._container.container
+			._items
+				._logo
+					+webp('images/logo.png')
+				._item
+					._item-title ФРИРАЙД ТУРЫ, ПРОЖИВАНИЕ, ПРОКАТ
+					._item-phone
+						img(src="./images/phone.png", alt="")._phone-icon
+						a(href="tel:89617233232")._tel 8 961 723 3232
+				._item
+					._item-title ОБУЧЕНИЕ, ШКОЛА ФРИРАЙДА
+					._item-phone
+						img(src="./images/phone.png", alt="")._phone-icon
+						a(href="tel:89232441122")._tel 8-923-244-11-22
+				._item
+					._item-title ТРАНФЕР
+					._item-phone
+						img(src="./images/phone.png", alt="")._phone-icon
+						a(href="tel:89231330011")._tel 8 923 133 0011
+				+socListWhite().soc-list--footer._soc-list

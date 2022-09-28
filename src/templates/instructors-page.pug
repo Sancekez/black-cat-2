@@ -1,0 +1,51 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'instructors-page.html';
+	- var pageTitle = 'Обучение';
+	- var classBody = 'main-page';
+	- var headerBg = 'images/main-banner.jpg';
+block styles
+
+block content
+	include ../scss/components/header/template
+	+header2({
+		link_2: "is-active",
+	})
+
+	.main-page.--instructors
+		include ../scss/components/about-section/template
+		+aboutSectionDefault({
+			title: 'BLACK CAT SCHOOL',
+			text: '<p>Это команда профессионалов сноуборда и горных лыж, которые прокачают любой твой навык ещё сильнее. Все наши инструкторы сертифицированы по стандарту ISIA, и имеют за плечами многолетний опыт работы. Мы обучаем на самых разных уровнях, от новичка до  продвинутого райдера. Направления в обучении: трассовое катание, фрирайд, карвинг, фристайл..</p>'
+		})._about-section.about-section--mode
+
+		include ../scss/components/skills-section/template
+		+skillsSection2()._skills-section
+
+		include ../scss/components/team-section/template
+		+teamSection2()._team-section
+
+		include ../scss/components/price-section/template
+		+priceSection()
+
+		include ../scss/components/gallery-section/template
+		+gallerySection({
+			img1: "images/instructor-gallery-4.jpg",
+			img2: "images/instructor-gallery-2.jpg",
+			img3: "images/instructor-gallery-3.jpg",
+			img4: "images/instructor-gallery-1.jpg"
+		})._gallery
+
+		include ../scss/components/table-section/template
+		+tableSection({
+			title: 'СТОИМОСТЬ',
+			subtitle: 'ИНДИВИДУАЛЬНЫЕ И ГРУППОВЫЕ ЗАНЯТИЯ',
+			text: '* услуги канатных дорог для ученика и инструктора<br> не входят в стоимость и опрачиваются дополнительно',
+		})._table
+
+		include ../scss/components/video-section/template
+		+videoSection().video-section--mode._video-section
+
+	//- +gridLayout()
+
+block scripts 

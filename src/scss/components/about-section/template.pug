@@ -1,0 +1,20 @@
+
+mixin aboutSectionDefault(data)
+	.about-section&attributes(attributes)
+		._bg
+		._container.container
+			h2._title.title-h2
+				!= data.title
+			._text
+				!= data.text
+
+mixin aboutHeaderSection(data)
+	.about-section.--header&attributes(attributes)
+		._container.container
+			._info
+				._title.title-h1
+					!=data.title
+				+socList()._soc-list
+				._button
+					a(href="#popup-booking").js-popup-show.btn
+						!=data.btn

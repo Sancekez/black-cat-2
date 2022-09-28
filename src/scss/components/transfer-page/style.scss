@@ -1,0 +1,24 @@
+.transfer-page {
+	&__transfer {
+		padding: 52px 0 103px;
+		@include media($md) {
+			padding: 57px 0 100px;
+		}
+		@include media($sm) {
+			padding: 60px 0 70px;
+		}
+		@include media($xs) {
+			padding: 66px 0 50px;
+		}
+	}
+	&__img {
+		img {
+			margin: 0 auto;
+			max-width: 1920px;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+			display: block;
+		}
+	}
+}

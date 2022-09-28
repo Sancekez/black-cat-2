@@ -1,0 +1,54 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'main.html';
+	- var pageTitle = 'Главная';
+	- var classBody = 'main-page';
+	- var headerBg = 'images/main-banner.jpg';
+	- var link_1 = "is-active";
+block styles
+
+	
+block content
+	include ../scss/components/header/template
+	+header({
+		img: "images/head-main-page.jpg",
+		link_1: "is-active"
+	})
+	//- include ../scss/components/first-section/template
+	//- +firstSection()
+	.main-page
+		include ../scss/components/about-section/template
+		+aboutSectionDefault({
+			title: 'О НАС',
+			text: '<p>Фрирайд на ратраках с командой опытных профессиональных гидов. Весь день катаем первым следом. Вдали от подъемников и трасс. Комфортабельные группы до 13 участников. Распределение участников по уровню. Новички, любители, продвинутые. Маршруты различного уровня. От Широких пологих полей, до уклонистых кулуаров и леса. Собственный парк ратраков с отапливаемой пассажирской кабиной. Скидки на катание, проживание, прокат и трансфер при покупке пакетного тура.</p>'
+		})._about-section
+		include ../scss/components/skills-section/template
+		+skillsSection()._skills-section
+
+		include ../scss/components/cost-section/template
+		+costSection()._cost-section
+
+		include ../scss/components/schedule-section/template
+		+scheduleSection()._schedule-section
+
+		include ../scss/components/map-section/template
+		+mapSection()._map-section
+
+		include ../scss/components/gallery-section/template
+		+gallerySection({
+			img1: "images/main-1.jpg",
+			img2: "images/main-2.jpg",
+			img3: "images/main-3.jpg",
+			img4: "images/main-4.jpg"
+		})._gallery-section
+
+		include ../scss/components/team-section/template
+		+teamSection()._team-section
+
+		include ../scss/components/video-section/template
+		+videoSection()
+
+		include ../scss/components/reviews-section/template
+		+reviewsSection()
+
+block scripts 

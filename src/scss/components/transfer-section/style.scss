@@ -1,0 +1,115 @@
+.transfer-section {
+	position: relative;
+	&__container {
+		max-width: 1101px;
+	}
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -348px;
+
+		img {
+			opacity: 0.7;
+			margin: 0;
+			display: block;
+			max-width: 1920px;
+			min-width: 1920px;
+			margin: 0 auto;
+			object-fit: cover;
+			@include media($sm) {
+				max-width: 1500px;
+				min-width: auto;
+			}
+			@include media($xs) {
+				max-width: 1330px;
+			}
+		}
+	}
+	&__info {
+		position: relative;
+		padding-bottom: 52px;
+		@include media($xs) {
+			padding-bottom: 25px;
+		}
+		&:after {
+			position: absolute;
+			right: -60px;
+			left: -60px;
+			bottom: 0;
+			content: "";
+			display: block;
+			height: 5px;
+			background-color: $green-light;
+			min-width: 100%;
+			margin: 0 auto;
+			@include media($xs) {
+				height: 3px;
+				right: 0;
+				left: 0;
+			}
+		}
+	}
+	&__title {
+		margin-bottom: 6px;
+		color: $green-light;
+		@include media($xs) {
+			text-align: center;
+			font: 700 18px/18px $baseFF;
+		}
+	}
+	&__paragraph {
+		font: 300 24px/30px $baseFF;
+		margin-bottom: 47px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include media($xs) {
+			font: 300 14px/16px $baseFF;
+			margin-bottom: 20px;
+			text-align: center;
+			align-content: center;
+			align-items: center;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		@include flex();
+		flex-direction: column;
+		span {
+		}
+		strong {
+		}
+	}
+	&__transfer {
+		padding-top: 20px;
+		max-width: 700px;
+		@include media($xs) {
+			padding-top: 25px;
+			text-align: center;
+			font: 300 14px/16px $baseFF;
+		}
+		span {
+			font: 300 24px/28px $baseFF;
+			@include media($xs) {
+				font: 300 14px/16px $baseFF;
+			}
+		}
+		strong {
+			font-weight: 700;
+		}
+		&-title {
+			margin-bottom: 26px;
+			color: $green-light;
+			@include media($md) {
+				margin-bottom: 30px;
+			}
+			@include media($xs) {
+				font: 700 18px/22px $baseFF;
+				margin-bottom: 21px;
+			}
+		}
+	}
+}

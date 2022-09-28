@@ -1,0 +1,114 @@
+.cost-section {
+	position: relative;
+	margin: -206px 0 0;
+	padding: 329px 0 271px;
+
+	@include media($lg) {
+		margin: -230px 0 0;
+	}
+	@include media($md) {
+		margin: -250px 0 0;
+		padding: 280px 0 280px;
+	}
+	@include media($sm) {
+		padding: 241px 0 245px;
+		margin: -310px 0 0;
+	}
+	@include media($xs) {
+		margin: -241px 0 0;
+		padding: 209px 0 220px;
+	}
+	@media(max-width:400px) {
+		padding: 209px 0 70px;
+	}
+	&__bg {
+		z-index: 2;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		img {
+			margin: 0;
+			display: block;
+			max-width: 1920px;
+			min-width: 1920px;
+			margin: 0 auto;
+			object-fit: cover;
+			@include media($sm) {
+				max-width: 1640px;
+				min-width: auto;
+			}
+			@include media($xs) {
+				max-width: 1330px;
+			}
+			@media(max-width:400px) {
+				max-width: 900px;
+			}
+		}
+		@media(max-width:400px) {
+			top: 67px;
+		}
+	}
+	&__items {
+		@include flex(space-between, flex-start, center, nowrap);
+		@include media($md) {
+			flex-direction: column;
+		}
+	}
+	&__container {
+		max-width: 848px;
+	}
+	&__info {
+		z-index: 5;
+		@include media($md) {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	&__title {
+		margin-bottom: 64px;
+		color: $neon;
+		text-transform: inherit;
+		@include media($md) {
+			margin-bottom: 40px;
+		}
+		@include media($sm) {
+			text-align: center;
+		}
+		@include media($xs) {
+			margin-bottom: 15px;
+		}
+	}
+	&__text {
+		max-width: 346px;
+		z-index: 2;
+		color: $white;
+		font: 300 24px/32px $baseFF;
+		@include media($md) {
+			font: 300 28px/35px $baseFF;
+			margin: 25px auto 0;
+			text-align: center;
+		}
+		@include media($sm) {
+			text-align: center;
+			max-width: 100%;
+		}
+		@include media($xs) {
+			font: 300 14px/16px $baseFF;
+		}
+	}
+	&__button {
+		z-index: 5;
+		.btn {
+			padding: 21px 39px;
+			@include media($xs) {
+				padding: 15px 22px;
+			}
+		}
+		@include media($md) {
+			margin: 0 auto;
+		}
+	}
+}

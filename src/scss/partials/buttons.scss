@@ -1,0 +1,159 @@
+.btn {
+	border: 6px solid $green-light;
+	font: 700 20px/20px $baseFF;
+	padding: 13px 26px;
+	// height: 59px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	color: $green-light;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: transparent;
+	color: $green-light;
+	@include media($xs) {
+		padding: 9px 15px;
+		font: 700 13px/15px $baseFF;
+		border: 4px solid $green-light;
+	}
+
+	&:hover,
+	&:active {
+		// border-color: none;
+		border-radius: 5px;
+		// color: $white;
+		// background-color: $green-light;
+		border-color: $blue-light;
+		color: $blue-light;
+		background: transparent;
+	}
+
+	&:focus {
+		outline: none; /* background: inherit; border-color: inherit; color: inherit;  */
+	}
+	&--font-big {
+		font: 700 35px/36px $baseFF;
+		@include media($sm) {
+			font: 700 25px/25px $baseFF;
+		}
+		@include media($xs) {
+			font: 700 20px/20px $baseFF;
+		}
+	}
+	&--border-bold {
+		border: 9px solid $green-light;
+		padding: 35px 10px;
+		@include media($md) {
+			padding: 20px 10px;
+		}
+		@include media($sm) {
+			border: 6px solid $green-light;
+		}
+		@include media($xs) {
+			padding: 15px 10px;
+		}
+	}
+	&--white {
+		border-color: $white;
+		color: $white;
+		&:hover,
+		&:active {
+			border-color: $blue-light;
+			color: $blue-light;
+			background: transparent;
+		}
+	}
+	&--dark {
+		&:hover {
+			color: #3c3c3f;
+			border-color: #3c3c3f;
+			background: transparent;
+		}
+	}
+	&--disabled,
+	&:disabled,
+	&[disabled],
+	&:disabled:focus {
+		/* background: $icon-bg-directory;
+		border-color: $icon-bg-directory;
+		color: $blue-dark; */
+		opacity: 0.4;
+		pointer-events: none;
+	}
+	&--h-white {
+		&:hover {
+			border-color: $white;
+			color: $white;
+			background: transparent!important;
+		}
+	}
+
+	&--icon {
+		@include flex(0, center, center, nowrap);
+		display: inline-flex;
+		padding-left: 10px;
+		padding-right: 10px;
+		svg {
+			font-size: 20px;
+			//fill: $green;
+			margin-right: 10px;
+			flex: 0 0 auto;
+		}
+		img {
+			margin-right: 10px;
+			flex: 0 0 auto;
+			display: block;
+		}
+		span {
+			flex: 1 1 auto;
+			text-align: center;
+			color: $white;
+		}
+		span + svg {
+			margin: 0 0 0 6px;
+		}
+	}
+
+	&--border {
+		background: transparent;
+		color: $green;
+		&:hover,
+		&:active {
+			border-color: $green;
+			background: $green;
+			color: $white;
+		}
+	}
+	&--md {
+		padding: 40px 63px;
+    	font: 698 36px/36px $baseFF;
+		@include media($md) {
+			padding: 15px 40px;
+			font: 700 30px/30px $baseFF;
+		}
+		@include media($sm) {
+			padding: 10px 20px;
+			font: 700 25px/30px $baseFF;
+			border: 4px solid $green-light;
+		}
+		@include media($xs) {
+			padding: 10px 20px;
+			font: 700 18px/20px $baseFF;
+		}
+	}
+	&--neon {
+		border-color: $neon;
+		color: $neon;
+
+		&:hover,
+		&:active {
+			border-color: none;
+			border-radius: 5px;
+			color: $white;
+			background-color: $neon;
+		}
+	}
+}

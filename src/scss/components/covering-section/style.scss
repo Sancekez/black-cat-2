@@ -1,0 +1,19 @@
+.covering-section {
+	padding: 70px 0;
+
+	&__title {
+		text-align: center;
+		color: $gray;
+	}
+	&__img {
+		display: block;
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	@include media($sm) {
+		padding: 50px 0;
+	}
+}

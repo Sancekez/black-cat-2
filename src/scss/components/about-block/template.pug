@@ -1,0 +1,26 @@
+
+mixin aboutBlock(data)
+	.about-block&attributes(attributes) 
+		._wrap 
+			if data.title
+				._title
+					!= data.title
+			._text
+				!= data.text
+		._img
+			+webp(data.img)
+
+
+mixin aboutBlockDecor(data)
+	.about-block.-reverse.-slider&attributes(attributes) 
+		._img.js-about-block-slider
+			._img-item
+				+webp(data.img)
+			._img-item
+				+webp(data.img)
+		._wrap 
+			if data.title
+				._title
+					!= data.title
+			._text
+				!= data.text

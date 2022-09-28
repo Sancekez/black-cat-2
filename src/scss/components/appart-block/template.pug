@@ -1,0 +1,23 @@
+mixin appartBlock(data)
+	.appart-block&attributes(attributes)
+		._title.title-h2
+			!=data.title
+		._text
+			!=data.text
+		._slider.js-apparts-slider.slider-arrow-dark
+			._slider-item
+				img(src=data.img1, alt="")
+			._slider-item
+				img(src=data.img2, alt="")
+			._slider-item
+				img(src=data.img3, alt="")
+			._slider-item
+				img(src=data.img4, alt="")
+			._slider-item
+				img(src=data.img5, alt="")
+			._slider-item
+				img(src=data.img6, alt="")
+			._slider-item
+				img(src=data.img7, alt="")
+		._button
+			a(href="#popup-appart").btn--dark.js-popup-show.btn узнать подробнее

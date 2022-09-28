@@ -1,0 +1,99 @@
+.burger {
+	text-decoration: none;
+	cursor: pointer;
+	z-index: 9998;
+	@include time();
+	width: 45px;
+	height: 45px;
+	display: none;
+	z-index: 50;
+
+	@include media($sm) {
+		@include flex(center, center, center, nowrap, column);
+	}
+
+	a {
+		text-decoration: none;
+	}
+	span {
+		display: block;
+		width: 40px;
+		height: 4px;
+		margin: 0 0 9px;
+		background: $green-light;
+		position: relative;
+		@include time();
+		border-radius: 2px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&:hover {
+		span {
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+
+	&.is-active {
+		z-index: 1000;
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		@include media($xs) {
+			top: 40px;
+			right: 20px;
+		}
+		span {
+			background-color: $white;
+		}
+		span:nth-of-type(2) {
+			opacity: 0;
+		}
+		span:first-child {
+			bottom: -13px;
+			-moz-transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			-o-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		span:last-child {
+			top: -12px;
+			-moz-transform: rotate(-45deg);
+			-webkit-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+
+		/* &.burger--normal{
+			span{ background: $white; }
+		} */
+	}
+
+	@include media($xs) {
+		width: 50px;
+		height: 50px;
+
+		span {
+			width: 30px;
+			margin-bottom: 7px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&.is-active {
+			span:first-child {
+				bottom: -10px;
+			}
+			span:last-child {
+				top: -12px;
+			}
+		}
+	}
+}

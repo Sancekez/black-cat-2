@@ -1,0 +1,12 @@
+.rental-page {
+	padding-bottom: 124px;
+	@include media($xs) {
+		padding-bottom: 34px;
+	}
+	&__table {
+		padding: 43px 0 321px;
+		@include media($xs) {
+			padding: 70px 0 92px;
+		}
+	}
+}

@@ -1,0 +1,99 @@
+.table-section {
+
+	&__container {
+		max-width: 782px;
+		@include media($lg) {
+			max-width: $containerMin;
+		}
+	}
+	&__title {
+		color: $green-light;
+		margin-bottom: 28px;
+		@include media($lg) {
+			margin-bottom: 20px;
+		}
+		@include media($xs) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__table {
+		@include media($sm) {
+			overflow-x: scroll;
+		}
+	}
+
+	&__subtitle {
+		font: 300 20px/1 $baseFF;
+		margin-bottom: 41px;
+		@include media($lg) {
+			font: 300 25px/25px $baseFF;
+			margin-bottom: 35px;
+		}
+		@include media($md) {
+			font: 300 20px/20px $baseFF;
+			margin-bottom: 30px;
+		}
+		@include media($xs) {
+			margin-bottom: 20px;
+			font: 300 16px/20px $baseFF;
+		}
+	}
+	&__text {
+		font: 300 22px/22px $baseFF;
+		color: $green-light;
+		margin-top: 28px;
+		@include media($lg) {
+			margin-top: 30px;
+		}
+		@include media($md) {
+			margin-top: 30px;
+		}
+		@include media($xs) {
+			font: 300 16px/16px $baseFF;
+			margin-top: 20px;
+		}
+	}
+	&--mode {
+		position: relative;
+	}	
+	&--mode & {
+		&__title {
+			margin-bottom: 39px;
+			@include media($xs) {
+				margin-bottom: 5px;
+				text-align: center;
+			}
+		}
+		&__subtitle {
+			margin-bottom: 0;
+			font: 300 28px/32px $baseFF;
+			@include media($sm) {
+				font: 300 20px/25px $baseFF;
+			}
+			@include media($xs) {
+				text-align: center;
+				font: 300 12px/14px $baseFF;
+			}
+		}
+		&__container {
+			max-width: 883px;
+		}
+		&__bg {
+			opacity: 0.7;
+			z-index: -1;
+			position: absolute;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			max-width: 1920px;
+			img {
+				display: block;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}

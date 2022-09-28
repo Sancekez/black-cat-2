@@ -1,0 +1,89 @@
+.footer {
+	padding: 18px 0 108px;
+	position: relative;
+	color: $black;
+	z-index: 3;
+	background-color: #2d9da1;
+	@include media($xs) {
+		padding: 13px 0 40px;
+	
+	}
+
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		margin: 0 auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 1920px;
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+
+			@include media($xs) {
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__items {
+		margin: 0 auto;
+	}
+	&__logo {
+		max-width: 250px;
+		margin: 0 auto 1px;
+		@include media($xs) {
+			max-width: 121px;
+		}
+	}
+	&__items {
+		font: 600 20px/24px $baseFF;
+		color: $white;
+		@include media($xs) {
+			font: 600 18px/24px $baseFF;
+		}
+	}
+	&__item {
+		text-align: center;
+		margin-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include media($xs) {
+			font: 700 13px/13px $baseFF;
+			margin-bottom: 15px;
+		}
+		&-title {
+			@include media($xs) {
+				margin-bottom: 3px;
+			}
+		}
+		&-phone {
+			font: 700px 20px/20px $baseFF;
+			@include flex(center, center, center);
+		}
+	}
+	&__phone-icon {
+		width: 17px;
+		margin-right: 10px;
+		@include media($xs) {
+			width: 10px;
+			margin-right: 5px;
+		}
+	}
+	&__tel {
+		display: block;
+	}
+	&__soc-list {
+		margin-top: -12px;
+		@include flex(center);
+		@include media($xs) {
+			margin-top: 15px;
+		}
+	}
+}

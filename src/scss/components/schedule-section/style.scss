@@ -1,0 +1,130 @@
+.schedule-section {
+	padding: 0 0 67px;
+	margin-top: -20px;
+	@include media($sm) {
+		padding: 20px 0 50px;
+	}
+	@include media($xs) {
+		padding: 13px 0 40px;
+	}
+	&__container {
+		position: relative;
+	}
+	&__info {
+		@include flex();
+		@include media($xs) {
+			justify-content: center;
+		}
+	}
+	&__title {
+		color: $green-light;
+		margin-bottom: 34px;
+		@include media($md) {
+			margin-bottom: 40px;
+		}
+		@include media($sm) {
+			margin-bottom: 30px;
+		}
+		@include media($xs) {
+			margin-bottom: 11px;
+			text-align: center;
+		}
+	}
+	&__left {
+	}
+	&__right {
+	}
+	&__items {
+	}
+	&__item {
+		@include flex(0,center,center);
+		flex-wrap: nowrap;
+		margin-bottom: 40px;
+		&:last-child {
+			margin-bottom: 0;
+			& > ::after {
+				display: none;
+			}
+		}
+		@include media($xs) {
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__time {
+		position: relative;
+		// z-index: 2;
+		border: 2px solid $white;
+		background-color: $green;
+		color: $black;
+		height: 80px;
+		width: 80px;
+		@include flex(center, center, center);
+		border-radius: 50%;
+		font: 700 23px/18px $baseFF;
+		&::after {
+			z-index: -1;
+			content: "";
+			position: absolute;
+			bottom: -82px;
+			left: calc(50% - 2px);
+			display: block;
+			height: 80px;
+			width: 4px;
+			background-color: $black;
+		}
+		@include media($md) {
+			font: 700 20px/20px $baseFF;
+			height: 65px;
+			width: 65px;
+			&::after {
+				left: calc(50% - 1px);
+				width: 2px;
+			}
+		}
+		@include media($xs) {
+			font: 700 12px/12px $baseFF;
+			height: 40px;
+			min-width: 40px;
+			max-width: 40px;
+			&::after {
+				z-index: -1;
+				height: 70px;
+				bottom: -52px;
+			}
+		}
+	}
+	&__text {
+		color: $black;
+		font: 300 24px/31px $baseFF;
+		margin-left: 48px;
+		@include media($md) {
+			margin-left: 30px;
+		}
+		@include media($xs) {
+			font: 300 12px/16px $baseFF;
+			margin-left: 20px;
+		}
+	}
+	&__img {
+		position: absolute;
+		top: -139px;
+		right: -140px;
+		max-width: 794px;
+		z-index: -1;
+		@include media($md) {
+			opacity: 0.5;
+			top: -80px;
+			max-width: 600px;
+		}
+		@include media($xs) {
+			opacity: 0.5;
+			top: auto;
+			bottom: -40px;
+			right: -70px;
+			max-width: 200px;
+		}
+	}
+}

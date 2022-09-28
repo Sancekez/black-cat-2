@@ -1,0 +1,30 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'tours.html';
+	- var pageTitle = 'Пакетные туры';
+	- var classBody = 'main-page';
+	- var headerBg = 'images/main-banner.jpg';
+block styles
+
+block content
+	include ../scss/components/header/template
+	+header3({
+		link_3: "is-active",
+	})
+
+	.main-page.--tours
+		include ../scss/components/tours-section/template
+		+toursSection()._tours
+
+		include ../scss/components/gallery-section/template
+		+gallerySection({
+			img1: "images/tour-gallery-1.png",
+			img2: "images/tour-gallery-2.png",
+			img3: "images/tour-gallery-3.png",
+			img4: "images/tour-gallery-4.png"
+		})._gallery
+
+
+	//- +gridLayout()
+
+block scripts 

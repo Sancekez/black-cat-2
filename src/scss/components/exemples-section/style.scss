@@ -1,0 +1,129 @@
+.exemples-section {
+	padding: 70px 0;
+
+	&__title {
+		text-align: center;
+		margin-bottom: 38px;
+		color: $gray;
+	}
+	&__subtitle {
+		text-align: center;
+		font: bold 22px $baseFF;
+		margin-bottom: 28px;
+	}
+	&__row {
+		//@include flex(0, stretch, stretch, nowrap);
+		position: relative;
+		margin: 0 -14px 55px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-item {
+			padding: 0 14px;
+		}
+	}
+	&__prev {
+		position: absolute;
+		left: -78px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__next {
+		position: absolute;
+		right: -78px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__buttons {
+		@include flex(center);
+		margin: 46px -30px 0;
+
+		&-item {
+			padding: 0 30px;
+			flex: 0 0 437px;
+
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+
+	@include media($lg) {
+		&__prev {
+			left: -50px;
+		}
+		&__next {
+			right: -50px;
+		}
+	}
+	@include media($md) {
+		&__row {
+			margin: 0 0 50px;
+			padding: 0 50px;
+		}
+		&__prev {
+			left: 0px;
+		}
+		&__next {
+			right: 0px;
+		}
+
+		&__buttons {
+			margin: 24px -15px 0;
+
+			&-item {
+				padding: 0 15px;
+				flex: 0 0 327px;
+			}
+		}
+	}
+
+	@include media($sm) {
+		padding: 50px 0;
+	}
+
+	@include media($xs) {
+		&__title {
+			margin-bottom: 30px;
+		}
+		&__subtitle {
+			font: bold 18px $baseFF;
+			margin-bottom: 20px;
+		}
+
+		&__row {
+			margin: 0 0 40px;
+			padding: 0;
+
+			&-item {
+				margin-bottom: 20px;
+				padding: 0;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&__next {
+			top: calc(100% + 10px);
+			transform: none;
+			right: calc(50% - 50px);
+		}
+		&__prev {
+			top: calc(100% + 10px);
+			transform: none;
+			left: calc(50% - 50px);
+		}
+		&__buttons {
+			&-item {
+				flex: 0 0 100%;
+				max-width: 380px;
+
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

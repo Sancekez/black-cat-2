@@ -1,0 +1,26 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'rental.html';
+	- var pageTitle = 'Прокат';
+	- var classBody = 'rental';
+block styles
+
+block content
+	include ../scss/components/header/template
+	+header5({
+		link_6: "is-active"
+	})
+
+	.rental-page
+		include ../scss/components/table-section/template
+		+tableSectionCost({
+			title: "СТОИМОСТЬ",
+			subtitle: "КОМПЛЕКТ ДОСКА + КРЕПЛЕНИЯ  2022 года",
+		})._table
+
+		include ../scss/components/products-section/template
+		+productsSection()._products
+
+	//- +gridLayout()
+
+block scripts 

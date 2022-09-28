@@ -1,0 +1,15 @@
+mixin productBlock(data)
+	.product-block&attributes(attributes)
+		._head
+			._head-title
+				!=data.title
+			._head-subtitle
+				!=data.subtitle
+		._about
+			._img
+				+webp(data.img)
+			._right
+				._text
+					!= data.text
+				._button
+					a(href="#popup-equipment" data-product=data.title).btn.btn--dark.js-popup-show забронировать

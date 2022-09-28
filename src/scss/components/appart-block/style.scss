@@ -1,0 +1,79 @@
+.appart-block {
+
+	&__title {
+		color: $green-light;
+		margin-bottom: 9px;
+		@include media($md) {
+			margin-bottom: 30px;
+		}
+		@include media($xs) {
+			margin-bottom: 9px;
+			text-align: center;
+		}
+	}
+	&__text {
+		font: 300 20px/29px $baseFF;
+		margin-bottom: 34px;
+		@include media($xs) {
+			margin-bottom: 13px;
+			font: 300 12px/16px $baseFF;
+		}
+	}
+	&__slider {
+		position: relative;
+		padding: 0 63px;
+		@include media($xs) {
+			padding: 0;
+		}
+
+		&-item {
+
+		}
+		.slick-dots{
+			li {
+				button {
+					background: rgba($black, 0.4);
+				}
+				&.slick-active {
+					button {
+						background: $neon;
+					}
+				}
+			}
+			@include media($xs) {
+				margin-top: 10px;
+			}
+		}
+	}
+	&__next {
+		right: 0;
+	}
+	&__prev {
+		left: 0;
+	}
+	&__prev,
+	&__next {
+		position: absolute;
+		top: calc(50% - 40px);
+	}
+	&__button {
+		padding: 0 55px;
+		margin-top: 37px;
+		.btn {
+			padding: 15px 35px;
+		}
+		@include media($md) {
+			margin-top: 30px;
+		}
+		@include media($sm) {
+		}
+		@include media($xs) {
+			
+			width: 100%;
+			.btn {
+				font: 700 14px/14px $baseFF;
+				width: 100%;
+			}
+		}
+	}
+}

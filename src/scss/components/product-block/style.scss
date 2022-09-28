@@ -1,0 +1,117 @@
+.product-block {
+	@include flex(0, 0, 0, nowrap, column);
+	background-color: $white;
+	&__head {
+		background-color: $green-bg-2;
+		padding: 16px 77px 8px;
+		color: $white;
+		&-title {
+			font: 700 34px/34px $baseFF;
+			margin-bottom: 10px;
+			@include media($sm) {
+				margin-bottom: 5px;
+				font: 700 30px/35px $baseFF;
+				text-align: center;
+			}
+			@include media($xs) {
+				font: 700 15px/15px $baseFF;
+			}
+		}
+		&-subtitle {
+			font: 300 21px/21px $baseFF;
+			@include media($md) {
+				font: 300 25px/1 $baseFF;
+			}
+			@include media($sm) {
+				font: 300 20px/1 $baseFF;
+				text-align: center;
+			}
+			@include media($xs) {
+				font: 300 12px/1 $baseFF;
+			}
+		}
+		@include media($sm) {
+			padding: 14px 20px 10px;
+		}
+	}
+	&__about {
+		@include flex();
+		flex-wrap: nowrap;
+		@include media($sm) {
+			flex-direction: column;
+		}
+	}
+	&__text {
+		margin-top: 13px;
+		font: 300 26px/34px $baseFF;
+		max-height: 540px;
+		overflow-y: auto;
+		@include media($md) {
+			margin-top: 26px;
+		}
+		@include media($sm) {
+			max-height: 400px;
+		}
+		@include media($xs) {
+			font: 300 14px/17px $baseFF;
+			max-height: 540px;
+			margin-top: 20px;
+		}
+	}
+	&__info {
+		font: 300 21px/26px $baseFF;
+		display: inline-block;
+		@include media($xs) {
+			margin-top: 20px;
+			font: 300 14px/17px $baseFF;
+		}
+	}
+	&__img {
+		margin-top: 48px;	
+		@include media($sm) {
+			margin-top: 35px;	
+			width: 100%;
+		}
+		img {
+			max-width: 434px;
+			height: 466px;
+			display: block;
+			object-fit: cover;
+			@include media($md) {
+				max-width: 420px;
+				height: 590px;
+			}
+			@include media($sm) {
+				max-width: 350px;
+				margin: 0 auto;
+				height: 400px;
+			}
+			@include media($xs) {
+			    max-width: 208px;
+				margin: 0 auto;
+				height: 129px;
+			}
+		}
+	}
+	&__right {
+		@include flex(space-between);
+		flex-direction: column;
+		height: 483px;
+		margin-left: 44px;
+		@include media($sm) {
+			height: auto;
+			max-height: 675px;
+			margin-left: 0;
+		}
+	}
+	&__button {
+		@include media($sm) {
+			margin-top: 30px;
+		}
+		@include media($xs) {
+			.btn {
+				width: 100%;
+			}
+		}
+	}
+}

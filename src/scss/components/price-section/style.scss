@@ -1,0 +1,78 @@
+.price-section {
+	position: relative;
+	&__container {
+		padding-top: 69px;
+		max-width: 889px;
+		padding-bottom: 63px;
+		@include media($xs) {
+			padding-top: 31px;
+			padding-bottom: 33px;
+		}
+	}
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		margin: 0 auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 1920px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title {
+		color: $green-light;
+		margin-bottom: 35px;
+		@include media($md) {
+			margin-bottom: 20px;
+		}
+		@include media($xs) {
+			margin-bottom: 15px;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 23px;
+		font: 300 18px/21px $baseFF;
+		@include media($lg) {
+			margin-bottom: 15px;
+			font: 300 22px/30px $baseFF;
+		}
+		@include media($sm) {
+			font: 300 20px/25px $baseFF;
+		}
+		@include media($xs) {
+			font: 300 12px/16px $baseFF;
+			margin-bottom: 27px;
+		}
+	}
+	&__item {
+		position: relative;
+		padding: 18px 0;
+		&:after {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -45px;
+			right: -33px;
+			content: "";
+			height: 5px;
+			min-width: 100%;
+			background-color: $green-light;
+			@include media($md) {
+				height: 3px;
+			}
+			@include media($xs){
+				height: 2px;
+				left: -5px;
+				right: -5px;
+			}
+		}
+		@include media($md) {
+			padding: 25px 0;
+		}
+	}
+}

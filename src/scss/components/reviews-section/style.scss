@@ -1,0 +1,105 @@
+.reviews-section {
+	position: relative;
+	overflow: hidden;
+	padding: 83px 0 62px;
+	@include media($sm) {
+		padding: 50px 0 40px;
+	}
+	@include media($xs) {
+		padding: 40px 0 17px;
+	}
+	&__container {
+		max-width: 930px;
+	}
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		margin: 0 auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 1920px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title {
+		margin-left: 15px;
+		margin-bottom: 60px;
+		color: $green-light;
+		@include media($sm) {
+			text-align: center;
+			margin-bottom: 50px;
+			margin-left: 0;
+		}
+		@include media($xs) {
+			margin-bottom: 23px;
+		}
+	}
+	&__slider {
+
+		.slick-dots {
+			li {
+				button {
+					background: rgba($black, 0.4);
+				}
+				&.slick-active {
+					button {
+						background: $green;
+					}
+				}
+			}
+		}
+		@include media($xs) {
+			padding: 0;
+		}
+	}
+	&__slider-item {
+	}
+	&__prev,
+	&__next {
+		height: 80px;
+		position: absolute;
+		top: calc(50% - -1px);
+	}
+	&__prev {
+		left: -70px;
+		@include media($md) {
+			left: -30px;
+		}
+		@include media($sm) {
+			left: 0;
+		}
+	}
+	&__next {
+		right: -73px;
+		@include media($md) {
+			right: -30px;
+		}
+		@include media($sm) {
+			right: 0;
+		}
+	}
+	&__button {
+		margin-top: 57px;
+		margin-left: 12px;
+		.btn {
+			font: 700 20px/20px $baseFF;
+			padding: 20px 45px;
+		}
+		@include media($sm) {
+			margin-top: 50px;
+			margin-left: 0;
+			text-align: center;
+		}
+		@include media($xs) {
+			.btn {
+				font: 700 16px/16px $baseFF;
+				padding: 16px 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+.team-block {
+	background-color: #202121;
+	color: $neon;
+	&__img {
+		img {
+			width: 100%;
+		}
+	}
+	&__name {
+		font: 700 20px/25px $baseFF;
+		text-transform: uppercase;
+		margin-bottom: 3px;
+		@include media($sm) {
+			font: 300 18px/23px $baseFF;
+		}
+	}
+	&__subtitle {
+		font: 700 16px/18px $baseFF;
+		margin-bottom: 15px;
+		@include media($sm) {
+			margin-bottom: 25px;
+		}
+	}
+	&__text {
+		color: $white;
+		font: 300 14px/22px $baseFF;
+		p {
+			margin-bottom: 33px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			@include media($sm) {
+				margin-bottom: 20px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		@include media($lg) {
+			font: 300 20px/28px $baseFF;
+		}
+		@include media($sm) {
+			font: 300 18px/25px $baseFF;
+		}
+		@include media($xs) {
+			font: 300 16px/20px $baseFF;
+		}
+	}
+	&__info {
+		padding: 12px 11px 15px;
+		max-height: 570px;
+		overflow-y: auto;
+		min-height: 348px;
+	}
+
+	&--mode & {
+		&__subtitle {
+			margin-bottom: 0;
+		}
+		&__info{
+			padding: 8px 22px 15px;
+		}
+		&__name {
+			margin-bottom: 8px;
+		}
+		&__text {
+			font: 300 16px/22px $baseFF;
+			color: $neon;
+			p {
+				margin-bottom: 19px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

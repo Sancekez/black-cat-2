@@ -1,0 +1,5 @@
+mixin portfolioBlock(data)
+	.portfolio-block&attributes(attributes)
+		._img
+			a.js-fancybox(href=data.img)
+				+webp(data.img)

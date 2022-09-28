@@ -1,0 +1,118 @@
+.main-page {
+	&__about-section {
+		padding-top: 28px;
+		padding-bottom: 350px;
+		@include media($md) {
+			padding-top: 50px;
+			padding-bottom: 410px;
+		}
+		@include media($sm) {
+			padding-top: 60px;
+			padding-bottom: 200px;
+		}
+		@include media($xs) {
+			padding-top: 65px;
+			padding-bottom: 280px;
+		}
+	}
+	&__map-section {
+		padding: 20px 0 77px;
+		@include media($xs) {
+			padding: 0 0 14px;
+		}
+	}
+	&__skills-section {
+		margin: -323px 0 0;
+		padding: 286px 0 134px;
+
+		@include media($lg) {
+			padding: 250px 0 100px;
+		}
+		@include media($sm) {
+			margin: -117px 0;
+			padding: 180px 0 160px;
+		}
+		@media(max-width: 400px) {
+			margin: -233px 0 -70px;
+			padding: 50px 0 115px;
+		}
+
+		&--mode {
+			@include media($sm) {
+				margin: -117px 0;
+				padding: 180px 0 0;
+			}
+			@include media($xs) {
+				margin: -233px 0 -70px;
+				padding: 120px 0 0;
+			}
+		}
+	}
+
+	&--instructors & {
+		&__gallery {
+			margin-top: 10px;
+			@include media($sm) {
+				margin-top: 5px;
+			}
+		}
+		&__table {
+			padding: 56px 0 46px;
+			@include media($lg) {
+				padding: 80px 0 100px;
+			}
+			@include media($md) {
+				padding: 70px 0 80px;
+			}
+			@include media($sm) {
+				padding: 60px 0 60px;
+			}
+		}
+		&__about-section {
+			padding-top: 64px;
+			padding-bottom: 371px;
+			@include media($sm) {
+				padding-top: 50px;
+				padding-bottom: 250px;
+			}
+			@include media($xs) {
+				padding-top: 65px;
+				padding-bottom: 333px;
+			}
+		}
+		&__skills-section {
+			margin-top: -334px;
+			padding-bottom: 40px;
+			@include media($lg) {
+				padding: 183px 0 30px;
+			}
+			@include media($sm) {
+				margin-top: -200px;
+			}
+			@include media($xs) {
+				margin-top: -232px;
+				padding: 90px 0 100px;
+			}
+		}
+	}
+	&--tours {
+		padding-top: 33px;
+		@include media($md) {
+			padding-top: 80px;
+		}
+		@include media($sm) {
+			padding-top: 60px;
+		}
+		@include media($xs) {
+			padding-top: 102px;
+		}
+	}
+	&--tours & {
+		&__tours {
+			padding-bottom: 87px;
+			@include media($xs) {
+				padding-bottom: 30px;
+			}
+		}
+	}
+}

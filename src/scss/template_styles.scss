@@ -1,0 +1,101 @@
+//include normalize
+@import "libs/normalize";
+//include fonts
+@import "partials/fonts";
+//include sprite-svg
+@import "partials/sprite-svg";
+//include variables
+@import "helpers/variables";
+// include functions
+@import "helpers/functions";
+
+@import "helpers/breakpoints";
+@import "helpers/grid-framework";
+@import "helpers/grid";
+
+// include mixin
+@import "helpers/mixin";
+/* Ссылки
+-----------------------------*/
+@import "partials/link";
+/* Сетка
+-----------------------------*/
+@import "partials/grid";
+/* Кнопки на сайте
+-----------------------------*/
+@import "partials/buttons";
+/* Элементы форм
+-----------------------------*/
+@import "partials/forms";
+@import "partials/checkbox";
+@import "partials/nice-select";
+@import "partials/range-slider";
+/* Базовые стили всего сайта
+-----------------------------*/
+@import "partials/base";
+
+/* TITLES */
+@import "partials/titles";
+//@import "partials/table";
+@import "partials/slick";
+//@import "partials/mCustomScrollbar";
+@import "partials/range-slider";
+// @import "partials/item-page";
+@import "partials/fancybox";
+
+/* Модальные окна
+-----------------------------*/
+//@import "../../bower_components/fancybox/dist/jquery.fancybox.css";
+
+/* Шапка сайта
+-----------------------------*/
+@import "components/header/style";
+@import "components/burger/style";
+@import "components/menu-block/style";
+@import "components/soc-list/style";
+@import "components/team-block/style";
+@import "components/review-block/style";
+@import "components/form-block/style";
+@import "components/price-block/style";
+@import "components/table-block/style";
+@import "components/about-block/style";
+@import "components/tour-block/style";
+@import "components/appart-block/style";
+@import "components/appart-block/style";
+@import "components/product-block/style";
+@import "components/popup/style";
+
+// @import "components/first-section/style";
+@import "components/about-section/style";
+@import "components/skills-section/style";
+@import "components/cost-section/style";
+@import "components/schedule-section/style";
+@import "components/gallery-section/style";
+@import "components/team-section/style";
+@import "components/video-section/style";
+@import "components/reviews-section/style";
+@import "components/price-section/style";
+@import "components/table-section/style";
+@import "components/tours-section/style";
+@import "components/apparts-section/style";
+@import "components/products-section/style";
+@import "components/transfer-section/style";
+@import "components/map-section/style";
+
+@import "components/rental-page/style";
+@import "components/accommodation-page/style";
+@import "components/transfer-page/style";
+
+
+/* Подвал сайта
+-----------------------------*/
+@import "components/footer/style";
+/* Мобильное меню
+-----------------------------*/
+
+/* Модификаторы  
+-----------------------------*/
+@import "partials/calendar.scss";
+
+//pages
+@import "components/main-page/style";

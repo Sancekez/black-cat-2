@@ -1,0 +1,8 @@
+mixin stepBlock(data)
+	.step-block&attributes(attributes)
+		._img 
+			+webp(data.img)
+		._title 
+			!= data.title 
+		._text 
+			!= data.text

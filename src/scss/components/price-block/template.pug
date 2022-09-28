@@ -1,0 +1,37 @@
+mixin priceBlock(data) 
+	.price-block&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._info
+			._about
+				._title
+					!=data.title
+				._text
+					!=data.text
+			._bottom
+				._price
+					p СТОИМОСТЬ
+					._value
+						!=data.price
+				._button
+					a(href="#popup-booking2").btn.js-popup-show записаться
+
+mixin priceBlockMode(data) 
+	.price-block.--mode&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._info
+			._about
+				._title
+					!=data.title
+				._subtitle
+					!=data.subtitle
+				._text
+					!=data.text
+			._bottom
+				._price
+					p СТОИМОСТЬ
+					._value
+						!=data.price
+				._button
+					a(href="#popup-booking2").btn.js-popup-show записаться

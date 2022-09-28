@@ -1,0 +1,123 @@
+.team-section {
+	position: relative;
+	overflow: hidden;
+	padding: 73px 0 90px;
+	@include media($sm) {
+		padding: 60px 0 50px;
+	}
+	&__bg {
+		z-index: -1;
+		position: absolute;
+		margin: 0 auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 1920px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__container {
+		max-width: 856px;
+	}
+	&__slider {
+		position: relative;
+		@include media($lg) {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 60px;
+		}
+		@include media($sm) {
+			max-width: 600px;
+		}
+		@include media($xs) {
+			padding: 0;
+		}
+	}
+	&__prev,
+	&__next {
+		position: absolute;
+		top: calc(50% - 75px);
+		&:hover {
+			svg {
+				fill: $white;
+			}
+		}
+	}
+	&__prev {
+		left: -43px;
+		@include media($lg) {
+			left: 0;
+		}
+	}
+	&__next {
+		right: -33px;
+		@include media($lg) {
+			right: 0;
+		}
+	}
+	&__title {
+		color: $neon;
+		margin-bottom: 38px;
+		@include media($lg) {
+			text-align: center;
+		}
+		@include media($sm) {
+			margin-bottom: 50px;
+		}
+		@include media($xs) {
+			margin-bottom: 30px;
+		}
+	}
+	&__slider-item {
+		padding: 0 8px;
+	}
+	&--mode2 {
+		padding-top: 309px;
+		padding-bottom: 51px;
+		@include media($lg) {
+			padding-top: 273px;
+		}
+		@include media($md) {
+			margin-top: -200px;
+		}
+		@include media($sm) {
+			padding-top: 250px;
+		}
+		@include media($xs) {
+			margin-top: -160px;
+			padding-top: 150px;
+		}
+	}
+	&--mode2 & {
+		&__container {
+			max-width: 824px;
+		}
+		&__title {
+			margin-left: 8px;
+		}
+		&__prev {
+			left: -45px;
+			@include media($sm) {
+				left: -30px;
+			}
+		}
+		&__next {
+			right: -22px;
+			@include media($sm) {
+				right: -13px;
+			}
+		}
+		&__prev,
+		&__next {
+			position: absolute;
+			top: calc(50% - 103px);
+		}
+		&__bg {
+			z-index: -2;
+		}
+	}
+}

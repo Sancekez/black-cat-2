@@ -1,0 +1,23 @@
+include ../table-block/template
+
+mixin tableSection(data) 
+	.table-section&attributes(attributes)
+		._container.container
+			._title.title-h2
+				!=data.title
+			._subtitle
+				!=data.subtitle
+			+tableBlock()._table
+			._text
+				!=data.text
+
+mixin tableSectionCost(data) 
+	.table-section.--mode&attributes(attributes)
+		._bg
+			+webp("images/about-section-bg-1.jpg")
+		._container.container
+			._title.title-h2
+				!=data.title
+			._subtitle
+				!=data.subtitle
+			+tableBlock2()._table

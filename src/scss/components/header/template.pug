@@ -1,0 +1,158 @@
+//- include ../icon-inline/template
+include ../menu-block/template
+include ../burger/template
+include ../soc-list/template
+include ../about-section/template
+
+mixin header(data)
+	header.header&attributes(attributes)
+		._body
+			._bg
+			._container.container
+				._head
+					a(href="/")._logo
+						+webp("images/logo.png")
+					._right
+						+menuBlock(data)._menu.js-main-menu
+						+burger()._burger
+						._phone
+							+webp("images/phone.png")._phone-icon
+							a(href="tel:83832550114")
+								<strong>8 (383) 255-01-14</strong>
+				._about
+					._info
+						._title.title-h1 ФРИРАЙД<br> В ШЕРЕГЕШЕ
+						._button
+							a(href="#popup-booking").js-popup-show.btn.btn--dark забронировать тур
+						._soc-list
+							+socList().soc-list--bold
+
+mixin header2(data)
+	header.header.--mode2&attributes(attributes)
+		._body
+			._bg
+			._container.container
+				._head
+					a(href="/")._logo
+						+webp("images/logo.png")
+					._right
+						+menuBlock(data)._menu.js-main-menu
+						+burger()._burger
+						._phone
+							+webp("images/phone.png")._phone-icon
+							a(href="tel:83832550114")
+								<strong>8 (383) 255-01-14</strong>
+				._about
+					._info
+						._title.title-h1 ИНСТРУКТОРЫ<br>  В ШЕРЕГЕШЕ
+						._contacts
+							+socList2().soc-list--white._soc-list
+							a(href="tel:89232441122")._contacts-phone
+								p 8 923 244 11 22
+						._button
+							a(href="#popup-booking2").btn.btn--white.js-popup-show записаться на обучение
+
+mixin header3(data)
+	header.header.--mode3&attributes(attributes)
+		._body
+			._bg
+			._container.container
+				._head
+					a(href="/")._logo
+						+webp("images/logo.png")
+					._right
+						+menuBlock(data)._menu.js-main-menu
+						+burger()._burger
+						._phone
+							+webp("images/phone.png")._phone-icon
+							a(href="tel:83832550114")
+								<strong>8 (383) 255-01-14</strong>
+				._about
+					._info
+						._title.title-h1 ПАКЕТНЫЕ<br> ТУРЫ
+						._button
+							a(href="#popup-tour").btn.js-popup-show.btn--dark забронировать тур
+						._contacts
+							+socList()._soc-list.soc-list--h-dark 
+
+mixin header4(data)
+	header.header.--white.--mode4&attributes(attributes)
+		._body
+			._bg
+			._container.container
+				._head
+					a(href="/")._logo
+						+webp("images/logo.png")
+					._right
+						+menuBlock(data)._menu.js-main-menu
+						+burger()._burger
+						._phone
+							+webp("images/phone.png")._phone-icon
+							a(href="tel:83832550114")
+								<strong>8 (383) 255-01-14</strong>
+				._about
+					._info
+						._title.title-h1 ПРОЖИВАНИЕ<br> В ШЕРЕГЕШЕ
+						._contacts
+							+socListWhite()._soc-list.soc-list--lg.soc-list--h-dark
+						._button
+							a(href="#popup-appart").btn.--white.--dark.js-popup-show забронировать
+
+mixin header5(data)
+	header.header.--mode5.--rental&attributes(attributes)
+		._body
+			._bg
+			._container.container
+				._head
+					a(href="/")._logo
+						+webp("images/logo.png")
+					._right
+						+menuBlock(data)._menu.js-main-menu
+						+burger()._burger
+						._phone
+							+webp("images/phone.png")._phone-icon
+							a(href="tel:83832550114")
+								<strong>8 (383) 255-01-14</strong>
+				._about
+					._info
+						._title.title-h1 ПРОКАТ
+						._subtitle Снаряжение экспертного уровня<br> с уклоном на фрирайд
+						._contacts
+							+socList()._soc-list.soc-list--lg.soc-list--h-dark
+						._button
+							a(href="#popup-equipment").btn.js-popup-show.btn--dark забронировать
+
+
+mixin header6(data)
+	header.header.--mode2.--mode5.--mode6&attributes(attributes)
+		._body
+			._bg
+			._container.container
+				._head
+					a(href="/")._logo
+						+webp("images/logo.png")
+					._right
+						+menuBlock(data)._menu.js-main-menu
+						+burger()._burger
+						._phone
+							+webp("images/phone.png")._phone-icon
+							a(href="tel:83832550114")
+								<strong>8 (383) 255-01-14</strong>
+				._about
+					._info
+						._title.title-h1 ТРАНСФЕР
+						._subtitle
+							._subtitle-item
+								span Новокузнецк
+								img(src="images/arrows.png", alt="")
+								span Шерегеш
+							._subtitle-item
+								span Новосибирск
+								img(src="images/arrows.png", alt="")
+								span Шерегеш
+						._contacts
+							+socList2().soc-list--white._soc-list
+							a(href="tel:89231330011")
+								p 8 923 133 0011
+						._button
+							a(href="#popup-transfer").btn.--white.js-popup-show.btn--h-blue забронировать

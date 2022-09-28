@@ -1,0 +1,46 @@
+mixin tableBlock(data)
+	.table-block&attributes(attributes)
+		table._table
+			thead._thead
+				tr._row
+					th(colspan="2")._head ИНДИВИДУАЛЬНОЕ<br> ЗАНЯТИЕ
+					th._head ГРУППА<br> 2 ЧЕЛОВЕКА
+					th._head ГРУППА<br> 3 ЧЕЛОВЕКА
+					th._head ГРУППА<br> 4 ЧЕЛОВЕКА
+			tbody._tbody
+				tr._row
+					td._item 2 часа
+					td._item 5 000
+					td._item 8 000
+					td._item 10 200
+					td._item 12 000
+				tr._row
+					td._item 4 часа
+					td._item 9 500
+					td._item 16 000
+					td._item 20 400
+					td._item 24 000
+				tr._row
+					td._item
+						<span>Курс 2 + 2<br> (по 2 часа<br>в день, 2 дня)</span>
+					td._item 9 500
+					td._item 16 000
+					td._item 20 400
+					td._item 24 000
+
+mixin tableBlock2(data)
+	.table-block.--mode&attributes(attributes)
+		table._table
+			tbody._tbody
+				tr._row
+					td._item 1 день
+					td._item 3 000
+				tr._row
+					td._item 3 день
+					td._item 8 000
+				tr._row
+					td._item 5 день
+					td._item 11 000
+				tr._row
+					td._item 7 день
+					td._item 13 000

@@ -1,0 +1,58 @@
+include ../portfolio-block/template
+
+mixin exemplesSection(data) 
+	.exemples-section&attributes(attributes)
+		._container.container
+			._title.title-h2
+				!= data.title 
+			._subtitle ОСТЕКЛЕНИЕ ДАЧ И БАНЬ
+			._row.row.js-exemples-slider
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-1.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-2.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-3.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-4.png'
+					}).portfolio-block--cottages
+
+			._subtitle ОСТЕКЛЕНИЕ ЗАГОРОДНЫХ ДОМОВ И КОТТЕДЖЕЙ
+			._row.row.js-exemples-slider
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-5.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-6.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-7.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-8.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-1.png'
+					}).portfolio-block--cottages
+				._row-item.col-3.col-sm-6.col-xs-12
+					+portfolioBlock({
+						img: 'images/exemple-img-2.png'
+					}).portfolio-block--cottages
+
+			._buttons
+				._buttons-item
+					a.btn.btn--icon.btn--xlg(href="#")
+						+webp('images/icon-call.png')
+						span УЗНАТЬ<br> ПОДРОБНЕЕ

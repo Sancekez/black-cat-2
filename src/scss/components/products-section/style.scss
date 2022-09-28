@@ -1,0 +1,30 @@
+.products-section {
+	margin: -152px 0 0;
+	@include media($sm) {
+		margin: -80px 0 0;
+	}
+	@include media($sm) {
+		margin: -40px 0 0;
+	}
+	&__container {
+		max-width: 885px;
+	}
+	&__item {
+		margin-bottom: 45px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include media($sm) {
+			margin-bottom: 70px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		@include media($sm) {
+			margin-bottom: 34px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+
+mixin coveringSection(data) 
+	.covering-section&attributes(attributes)
+		._container.container
+			._title.title-h2
+				!= data.title
+			picture._img
+				source(media="(max-width: 998px)" srcset="images/covering-section-img-xs.png")
+				img(src="images/covering-section-img.png", alt="")

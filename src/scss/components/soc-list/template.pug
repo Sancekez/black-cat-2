@@ -1,0 +1,35 @@
+mixin socList(data)
+	.soc-list&attributes(attributes)
+		._item
+			a(href="#")
+				//- img(src="./images/vk.png", alt="")
+				+svg("vk")
+		._item
+			a(href="#")
+				//- img(src="./images/wpp.png", alt="")
+				+svg("wpp")
+		._item
+			a(href="#")
+				//- img(src="./images/telegram.png", alt="")
+				+svg("telegram")
+
+mixin socList2(data)
+	.soc-list.--white&attributes(attributes)
+		._item
+			a(href="#")
+				+svg("wpp")
+		._item
+			a(href="#")
+				+svg("telegram")
+
+mixin socListWhite(data)
+	.soc-list.--white&attributes(attributes)
+		._item
+			a(href="#")
+				+svg("vk")
+		._item
+			a(href="#")
+				+svg("wpp")
+		._item
+			a(href="#")
+				+svg("telegram")

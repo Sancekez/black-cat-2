@@ -1,0 +1,152 @@
+.about-block {
+	@include flex(space-between, center, center, nowrap);
+	&__wrap {
+		flex: 1 1 auto;
+		max-width: 650px;
+	}
+	&__img {
+		flex: 0 0 388px;
+		max-width: 388px;
+		margin-left: 20px;
+
+		img {
+			border-radius: 40px;
+		}
+	}
+	&__title {
+		font: bold 35px $baseFF;
+	}
+
+	&__text {
+		font: 30px $baseFF;
+	}
+
+	@include media($md) {
+		&__title {
+			font: bold 30px $baseFF;
+		}
+
+		&__text {
+			font: 25px $baseFF;
+		}
+		&__img {
+			flex: 0 0 288px;
+			max-width: 288px;
+			margin-left: 20px;
+		}
+	}
+	@include media(800px) {
+		flex-wrap: wrap;
+
+		&__img {
+			margin: 0 0 80px;
+			flex: 0 0 100%;
+			max-width: 100%;
+			order: -1;
+
+			picture,
+			img {
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		&__wrap {
+			flex: 0 0 100%;
+			max-width: 100%;
+			text-align: center;
+		}
+	}
+
+	@include media($xs) {
+		&__title {
+			font: bold 24px $baseFF;
+		}
+
+		&__text {
+			font: 18px $baseFF;
+		}
+		&__img {
+			margin: 0 0 40px;
+		}
+	}
+
+	&--reverse & {
+		&__img {
+			order: -1;
+			margin: 0 140px 0 0;
+		}
+
+		@include media($lg) {
+			&__img {
+				margin-right: 20px;
+			}
+		}
+	}
+	&--slider & {
+		&__img {
+			position: relative;
+		}
+		&__prev {
+			position: absolute;
+			left: -82px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&__next {
+			position: absolute;
+			right: -82px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@include media($lg) {
+			&__img {
+				padding: 0 60px;
+				flex: 0 0 508px;
+				max-width: 508px;
+			}
+			&__prev {
+				left: 0;
+			}
+			&__next {
+				right: 0;
+			}
+		}
+		@include media($md) {
+			&__img {
+				padding: 0 60px;
+				flex: 0 0 408px;
+				max-width: 408px;
+			}
+		}
+		@include media($sm) {
+			&__img {
+				margin: 0 auto 100px;
+				padding: 0;
+				max-width: 100%;
+			}
+			&__prev {
+				top: calc(100% + 10px);
+				left: calc(50% - 70px);
+				transform: none;
+			}
+			&__next {
+				top: calc(100% + 10px);
+				right: calc(50% - 70px);
+				transform: none;
+			}
+		}
+
+		@include media($xs) {
+			&__img {
+				margin: 0 auto 70px;
+			}
+			&__prev {
+				left: calc(50% - 50px);
+			}
+			&__next {
+				right: calc(50% - 50px);
+			}
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.gallery-section {
+	&__container {
+		@include flex();
+		max-width: 1920px;
+		padding: 0;
+	}
+	&__items {
+		img {
+			@include media($xs) {
+				margin-bottom: 5px;
+			}
+		}
+	}
+	&__row {
+		@include flex(0, 0, 0, nowrap);
+		gap: 0 17px;
+		@include media($sm) {
+			gap: 0 5px;
+		}
+		img {
+			display: block;
+			object-fit: cover;
+		}
+		margin-bottom: 17px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include media($sm) {
+			margin-bottom: 5px;
+		}
+		@include media($xs) {
+			gap: 0 0;
+			@include flex(0, 0, 0, wrap);
+			margin-bottom: 0;
+		}
+	}
+	&__img {
+		&-1 {
+		}
+		&-2 {
+			img {
+				max-width: 684px;
+			}
+		}
+		&-3 {
+		}
+		&-4 {
+			img {
+				max-width: 684px;
+			}
+		}
+	}
+}

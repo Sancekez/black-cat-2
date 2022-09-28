@@ -1,0 +1,108 @@
+.price-block {
+	@include flex();
+	flex-wrap: nowrap;
+	@include media($sm) {
+		flex-direction: column;
+	}
+
+	&__img {
+		margin-right: 30px;
+		img {
+			display: block;
+			max-width: 219px;
+			@include media($xs) {
+				max-width:100%;
+			}
+		}
+		@include media($sm) {
+			max-width: 200px;
+			margin: 0 auto 20px;
+		}
+		@include media($xs) {
+			max-width:100%;
+		}
+	}
+	&__info {
+		@include flex(space-between,0,0,0,column);
+		align-content: space-between;
+		min-height: 230px;
+		width: 100%;
+		@include media($sm) {
+			align-content: flex-start;
+			justify-content: flex-start;
+			min-height: auto;
+		}
+	}
+	&__title {
+		font: 700 22px/22px $baseFF;
+		color: $green-light;
+		margin-bottom: 8px;
+		@include media($sm) {
+			text-align: center;
+		}
+		@include media($xs){
+			font: 700 16px/16px $baseFF;
+			text-align: left;
+		}
+	}
+	&__text {
+		font: 300 18px/21px $baseFF;
+		margin-bottom: 20px;
+		@include media($sm) {
+			text-align: center;
+		}
+		@include media($xs){
+			font: 300 14px/16px $baseFF;
+			text-align: left;
+		}
+	}
+	&__bottom {
+		@include flex(space-between, flex-end, flex-end);
+		flex-wrap: nowrap;
+		width: 100%;
+	}
+	&__price {
+		font: 700 22px/22px $baseFF;
+		color: $green-light;
+		p {
+			margin-bottom: 7px;
+		}
+		@include media($xs) {
+			font: 700 14px/16px $baseFF;
+		}
+	}
+	&__about {
+	}
+	&__button {
+		min-width: 200px;
+		&:hover {
+			
+		}
+		.btn {
+			padding: 15px 25px;
+			font: 700 19px/19px $baseFF;
+			width: 100%;
+			@include media($xs) {
+				padding: 10px 15px;
+				font: 700 14px/14px $baseFF;
+			}
+		}
+		@include media($xs) {
+			min-width: 130px;
+		}
+	}
+	&--mode & {
+		&__subtitle {
+			font: 700 22px/22px $baseFF;
+			margin-bottom: 20px;
+			@include media($sm) {
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			@include media($xs) {
+				text-align: left;
+				font: 700 14px/16px $baseFF;
+			}
+		}
+	}
+}

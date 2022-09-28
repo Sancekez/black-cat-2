@@ -1,0 +1,28 @@
+/* @font-face {
+	font-family: "avantelt";
+	src: url("../fonts/aavanteltlight.ttf") format("ttf");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "avantelt";
+	src: url("../fonts/aavanteltdemibold.ttf") format("ttf");
+	font-weight: 700;
+} */
+
+@font-face {
+	font-family: "a_AvanteLt";
+	src: url("../fonts/AAvanteLtDemiBold.woff2") format("woff2"), url("../fonts/AAvanteLtDemiBold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "a_AvanteLt";
+	src: url("../fonts/AAvanteLtLight.woff2") format("woff2"), url("../fonts/AAvanteLtLight.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}

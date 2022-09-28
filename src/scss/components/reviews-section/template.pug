@@ -1,0 +1,35 @@
+include ../review-block/template
+
+mixin reviewsSection(data)
+	.reviews-section&attributes(attributes)
+		._bg
+			+webp("images/review-bg.jpg")
+		._container.container
+			._title.title-h2 отзывы
+			._slider.js-review-slider.slider-arrow-dark
+				._slider-item
+					+reviewBlock({
+						img: 'images/user-1.png',
+						name: 'Лева<br> Лапенков',
+						text: 'Это была лучшая катка!) эмоции бьют через край, сегодня сошлось все: количество снега, солнце, офигенная компания '
+					})
+				._slider-item
+					+reviewBlock({
+						img: 'images/user-2.png',
+						name: 'Кирилл<br> Седельников',
+						text: 'Побывал во многих горах и в самом Шерегеше раз уже 8, но ребята удивили новыми местами и нетронутыми на удивления лесами. Советую!'
+					})
+				._slider-item
+					+reviewBlock({
+						img: 'images/user-1.png',
+						name: 'Лева<br> Лапенков',
+						text: 'Это была лучшая катка!) эмоции бьют через край, сегодня сошлось все: количество снега, солнце, офигенная компания '
+					})
+				._slider-item
+					+reviewBlock({
+						img: 'images/user-2.png',
+						name: 'Кирилл<br> Седельников',
+						text: 'Побывал во многих горах и в самом Шерегеше раз уже 8, но ребята удивили новыми местами и нетронутыми на удивления лесами. Советую!'
+					})
+			._button
+				a(href="#").btn.btn--dark оставить отзыв

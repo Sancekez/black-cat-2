@@ -1,0 +1,92 @@
+.about-section {
+	position: relative;
+
+	&__wrapper {
+		background: linear-gradient(180deg, #f3ece1 0%, rgba(243, 236, 225, 0) 100%);
+	}
+
+	&__container {
+		max-width: $containerMin;
+	}
+	&__bg {
+		position: absolute;
+		top: -237px;
+		left: 0;
+		z-index: -1;
+		background: url("../images/about-section-bg-1.jpg") no-repeat;
+		opacity: 0.7;
+		min-height: 800px;
+		display: block;
+		min-width: 100%;
+		background-position: center;
+		@include media($md) {
+			background-size: cover;
+			min-height: 800px;
+		}
+		@include media($sm) {
+			top: -150px;
+			min-height: 750px;
+		}
+		@include media($xs) {
+			background-size: cover;
+			min-height: 600px;
+			top: -50px;
+		}
+	}
+	&__title {
+		color: $green-light;
+		margin-bottom: 18px;
+		position: relative;
+		z-index: 1;
+		@include media($sm) {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		@include media($xs) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text {
+		color: $gray;
+		position: relative;
+		z-index: 1;
+		font: 300 20px/24px $baseFF;
+		color: $brown;
+		@include media($sm) {
+			font: 300 18px/20px $baseFF;
+			max-width: 700px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		@include media($xs) {
+			font: 300 14px/18px $baseFF;
+		}
+		p {
+			margin-bottom: 1em;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&--mode & {
+		&__container {
+			max-width: 796px;
+		}
+		&__title {
+			margin-bottom: 37px;
+			@include media($xs) {
+				margin-bottom: 12px;
+			}
+		}
+		&__bg {
+			min-height: 939px;
+			@include media($sm) {
+				min-height: 700px;
+			}
+			@include media($xs) {
+				min-height: 600px;
+			}
+		}
+	}
+}

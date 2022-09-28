@@ -1,0 +1,16 @@
+mixin tourBlock(data) 
+	.tours-block&attributes(attributes)
+		._img
+			img(src=data.img, alt="")
+		._info
+			._title
+				!=data.title 
+			._text
+				!=data.text
+			._price
+				span СТОИМОСТЬ
+				._cost
+					!=data.cost
+			._additional *стоимость тура зависит от дат и количества свободных мест. Для уточнения цены на конкретные даты оставьте заявку.
+			._button
+				a(href="#popup-tour").js-popup-show.btn.btn--dark забронировать 

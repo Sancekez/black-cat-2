@@ -1,0 +1,10 @@
+mixin reviewBlock(data)
+	.review-block&attributes(attributes)
+		._container.container
+			._head
+				._img
+					img(src=data.img, alt="")
+				._name
+					!=data.name
+			._text
+				!=data.text

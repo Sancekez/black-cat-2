@@ -1,0 +1,11 @@
+mixin gallerySection(data) 
+	.gallery-section&attributes(attributes)
+		._container.container
+			._items
+				._row
+					+webp(data.img1)._img-1
+					+webp(data.img2)._img-2
+				._row
+					+webp(data.img3)._img-3
+					+webp(data.img4)._img-4
+					//- "images/main-4.jpg"

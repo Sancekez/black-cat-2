@@ -1,0 +1,20 @@
+extends extends/base.pug
+append vars
+	- var pageUrl = 'accommodation.html';
+	- var pageTitle = 'Проживание в Шерегеше';
+	- var classBody = 'accommodation';
+block styles
+
+block content
+	include ../scss/components/header/template
+	+header4({
+		link_5: "is-active",
+	}).header--accommodation
+
+	.accommodation-page
+		include ../scss/components/apparts-section/template
+		+appartsSection()._item
+
+	//- +gridLayout()
+
+block scripts 

@@ -1,0 +1,25 @@
+include ../step-block/template
+
+mixin stepsSection(data)
+	.steps-section&attributes(attributes)
+		._container.container 
+			._title.title-h2 ЗАКАЗ В 3 ЭТАПА
+			._row.row 
+				._row-col.col-3.col-sm-6.col-xs-12
+					+stepBlock({
+						img: 'images/step-block-img-1.png',
+						title: 'Консультация',
+						text: 'Вы оставляете заявку на сайте или звоните в офис продаж, менеджер вас подробно консультирует и производит расчёт стоимости вашего заказа.'
+					})
+				._row-col.col-6.col-sm-6.col-xs-12
+					+stepBlock({
+						img: 'images/step-block-img-2.png',
+						title: 'Замер',
+						text: 'Замерщик-конструктор приедет в удобное для вас время, включая выходные и праздничные дни, проконсультирует и поможет выбрать оптимальную комплектацию вашего заказа (профиль, стеклопакет, фурнитуру, отделочные материалы). Договор возможно заключить на месте.<br> После чего ваш заказ передаётся в производство.'
+					})
+				._row-col.col-3.col-sm-12.col-xs-12
+					+stepBlock({
+						img: 'images/step-block-img-3.png',
+						title: 'Доставка и монтаж',
+						text: 'Доставка и монтаж будут организованы в удобное для вас время, включая выходные и праздничные дни.'
+					})

@@ -1,0 +1,171 @@
+
+mixin formBlock()
+	.form-block&attributes(attributes)
+		form(action="mail.php" class="js-contact-form")
+			._row
+				._label ваше имя
+				._input
+					input.js-required(type="text" name="name" placeholder="ИМЯ" required)
+			._row
+				._label ваш телефон
+				._input
+					input.js-required(type="tel" name="phone" placeholder="+7 999 999 99 99" required)
+			._row
+				._label дата
+				._input
+					img(src="./images/calendar.png", alt="")._input-icon
+					input.js-required(type="text" name="data" placeholder="дата" required).calendar-js
+			._row
+				._label количество человек
+				._input
+					input.js-required(type="number" name="count" placeholder="" value="1" required)
+			._button
+				button(type="submit").btn забронировать
+
+mixin formBlock2()
+	.form-block.--mode&attributes(attributes)
+		form(action="mail.php" class="js-contact-form")
+			._row
+				._label ваше имя
+				._input
+					input.js-required(type="text" name="name" placeholder="ИМЯ" required)
+			._row
+				._label ваш телефон
+				._input
+					input.js-required(type="tel" name="phone" placeholder="+7 999 999 99 99" required)
+			._row
+				._label дата
+				._input
+					img(src="./images/calendar.png", alt="")._input-icon
+					input.js-required(type="text" name="data" placeholder="дата" required).calendar-js
+			._row
+				._label количество человек
+				._input
+					input.js-required(type="number" name="count" placeholder="" value="1" required)
+			._row
+				._label укажите снаряд
+				._select
+					select.nice-select(name="equipment")
+						option(value="") Сноуборд/Горные лыжы
+						option(value="") Горные лыжы
+						option(value="") Сноуборд
+			._row
+				._label программа обучения
+				._select
+					select.nice-select(name="program")
+						option(value="") 3-дневная школа фрирайда
+						option(value="") 5-дневная школа фрирайда
+						option(value="") 12-дневная школа фрирайда
+			._button
+				button(type="submit").btn забронировать
+
+mixin formBlock3()
+	.form-block.--mode&attributes(attributes)
+		form(action="mail.php" class="js-contact-form")
+			._row
+				._label ваше имя
+				._input
+					input.js-required(type="text" name="name" placeholder="ИМЯ" required)
+			._row
+				._label ваш телефон
+				._input
+					input.js-required(type="tel" name="phone" placeholder="+7 999 999 99 99" required)
+			._row
+				._label дата
+				._input
+					img(src="./images/calendar.png", alt="")._input-icon
+					input.js-required(type="text" name="data" placeholder="дата" required).calendar-js
+			._row
+				._label количество человек
+				._input
+					input.js-required(type="number" name="count" placeholder="" value="1" required)
+			._row
+				._label выберите тур
+				._select
+					select.nice-select(name="tur")
+						option(value="") пакетный тур на 5 дней
+						option(value="") пакетный тур на 7 дней
+						option(value="") пакетный тур на 10 дней
+			._button
+				button(type="submit").btn забронировать
+
+mixin formBlock4()
+	.form-block.--mode&attributes(attributes)
+		form(action="mail.php" class="js-contact-form")
+			._row
+				._label ваше имя
+				._input
+					input.js-required(type="text" name="name" placeholder="ИМЯ" required)
+			._row
+				._label ваш телефон
+				._input
+					input.js-required(type="tel" name="phone" placeholder="+7 999 999 99 99" required)
+			._row
+				._label дата
+				._input
+					img(src="./images/calendar.png", alt="")._input-icon
+					input.js-required(type="text" name="data" placeholder="дата" required).calendar-js
+			._row
+				._label количество человек
+				._input
+					input.js-required(type="number" name="count" placeholder="" value="1" required)
+			._row
+				._label выберите тур
+				._select
+					select.nice-select(name="tur")
+						option(value="") WOW APARTS
+						option(value="") Гостиница AYS HOTEL
+						option(value="") Хостел  в коробке
+			._button
+				button(type="submit").btn забронировать
+
+mixin formBlock5()
+	.form-block.--mode&attributes(attributes)
+		form(action="mail.php" class="js-contact-form")
+			._row
+				._label ваше имя
+				._input
+					input.js-required(type="text" name="name" placeholder="ИМЯ" required)
+			._row
+				._label ваш телефон
+				._input
+					input.js-required(type="tel" name="phone" placeholder="+7 999 999 99 99" required)
+			._row
+				._label дата
+				._input
+					img(src="./images/calendar.png", alt="")._input-icon
+					input.js-required(type="text" name="data" placeholder="дата" required).calendar-js
+			._row
+				._label снаряжение
+				._select
+					select.nice-select(name="equipment")
+						option(value="") NEVER SUMMER SWIFT
+						option(value="") LIB TECH
+						option(value="") JONES STORM WOLF
+			._button
+				//-a(href="#popup-message").btn.js-popup-show забронировать
+				button(type="submit").btn забронировать
+
+mixin formBlock6()
+	.form-block.--mode&attributes(attributes)
+		form(action="mail.php" class="js-contact-form")
+			._row
+				._label ваше имя
+				._input
+					input.js-required(type="text" name="name" placeholder="ИМЯ" required)
+			._row
+				._label ваш телефон
+				._input
+					input.js-required(type="tel" name="phone" placeholder="+7 999 999 99 99" required)
+			._row
+				._label дата
+				._input(data-lang="ru")
+					img(src="./images/calendar.png", alt="")._input-icon
+					input.js-required(type="text" name="data" placeholder="дата").calendar-js
+			._row
+				._label количество человек
+				._input
+					input.js-required(type="number" name="count" placeholder="" value="1" required)
+			._button
+				//-a(href="#popup-message").btn.js-popup-show забронировать
+				button(type="submit").btn забронировать

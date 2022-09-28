@@ -1,0 +1,149 @@
+.menu-block {
+	@include flex(0, center, center, nowrap);
+
+	.link-ease-in-out a .link-ease-in-out a:hover:after,
+	.link-ease-in-out a:focus:after {
+		width: 100%;
+	}
+	&__logo {
+		display: none;
+		width: 150px;
+		margin: 0 auto;
+		@include media($sm) {
+			display: block;
+		}
+	}
+	&__item.is-active {
+		a {
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+	&__item {
+		color: $white;
+		font: 700 18px/1 $baseFF;
+		position: relative;
+		text-align: center;
+		margin-right: 35px;
+		transition: all 0.4s;
+
+		@include media($sm) {
+			margin-right: 0;
+		}
+		a {
+			/* &:after {
+				margin-top: 3px;
+				background-color: $white; 
+				display: block;
+				content: "";
+				height: 2px; 
+				width: 0%;
+				-webkit-transition: width .3s ease-in-out;
+				-moz--transition: width .3s ease-in-out;
+				transition: width .3s ease-in-out;
+				@include media($sm) {
+					display: none;
+				}
+			} */
+
+			&:hover,
+			&:focus {
+				color: $black;
+				/* &:after {
+					width: 100%;
+				} */
+			}
+		}
+
+		&.is-active {
+			a {
+				color: #3c3c3f;
+			}
+		}
+
+		& > a,
+		& > span {
+			text-decoration: none;
+		}
+
+		img {
+			display: none;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+		&--phone {
+			display: none;
+			@include media($xs) {
+				display: block;
+			}
+		}
+	}
+
+	@include media($md) {
+		justify-content: space-around;
+		&__item {
+			font-size: 16px;
+		}
+	}
+
+	@include media($sm) {
+		@include flex(flex-start, flex-start, 0, nowrap, column);
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		overflow-y: auto;
+		z-index: 999;
+		background: #379d9d;
+		transition: opacity 0.7s;
+		opacity: 0;
+		pointer-events: none;
+		padding: 35px 30px 30px;
+
+		&.is-active {
+			opacity: 1;
+			pointer-events: auto;
+			top: 0;
+		}
+
+		&__item {
+			margin-bottom: 42px;
+			font: 700 24px/24px $baseFF;
+			width: 100%;
+			@include media($xs) {
+				margin-bottom: 10px;
+				font: 700 18px/18px $baseFF;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+				margin-top: 40px;
+				@include media($xs) {
+					margin-top: 20px;
+				}
+			}
+
+			a {
+				
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 7px 14px 7px 24px;
+				border-radius: 10px;
+				color: $white;
+				text-align: left;
+			}
+			img {
+				width: 82px;
+				height: 82px;
+				flex: 0 0 auto;
+				object-fit: contain;
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.step-block {
+	text-align: center;
+	&__img {
+		margin-bottom: 15px;
+		img {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+	&__title {
+		font: bold 30px $baseFF;
+		color: $black;
+		margin-bottom: 15px;
+	}
+	&__text {
+		font: 25px $baseFF;
+		color: $black;
+	}
+
+	@include media($md) {
+		&__img {
+			img {
+				height: 140px;
+			}
+		}
+		&__title {
+			font: bold 25px $baseFF;
+			margin-bottom: 10px;
+		}
+		&__text {
+			font: 18px $baseFF;
+		}
+	}
+
+	@include media($xs) {
+		&__img {
+			img {
+				height: 100px;
+			}
+		}
+		&__title {
+			font: bold 20px $baseFF;
+		}
+		&__text {
+			font: 16px $baseFF;
+		}
+	}
+}
